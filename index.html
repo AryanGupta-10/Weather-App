@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmosphere | Premium Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-anim"></div>
+
+    <main class="glass-container">
+
+        <header>
+            <div class="search-box">
+                <i class="ri-search-line"></i>
+                <input type="text" id="city-input" placeholder="Search for a city...">
+                <button id="search-btn">Search</button>
+            </div>
+            <button id="settings-btn" title="Change API Key"><i class="ri-settings-4-line"></i></button>
+        </header>
+
+        <section class="weather-display" id="weather-display">
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+            </div>
+
+
+            <div id="error-message" class="hidden">
+                <i class="ri-error-warning-line"></i>
+                <span id="error-text">City not found.</span>
+            </div>
+
+
+            <div id="weather-content" class="hidden">
+                <div class="main-info">
+                    <h1 class="city-name" id="city-name">London, UK</h1>
+                    <div class="date-time" id="date-time">Monday, 12 Oct</div>
+                    <div class="temp-container">
+                        <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@4x.png" alt="weather icon"
+                            class="weather-icon-img">
+                        <div class="temp">
+                            <span id="temperature">24</span>°C
+                        </div>
+                    </div>
+                    <div class="condition" id="condition">Partly Cloudy</div>
+                </div>
+
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <i class="ri-water-percent-line"></i>
+                        <div class="detail-info">
+                            <span class="detail-label">Humidity</span>
+                            <span class="detail-value" id="humidity">65%</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="ri-windy-line"></i>
+                        <div class="detail-info">
+                            <span class="detail-label">Wind Speed</span>
+                            <span class="detail-value" id="wind-speed">12 km/h</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="ri-dashboard-3-line"></i>
+                        <div class="detail-info">
+                            <span class="detail-label">Pressure</span>
+                            <span class="detail-value" id="pressure">1012 hPa</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="ri-eye-line"></i>
+                        <div class="detail-info">
+                            <span class="detail-label">Visibility</span>
+                            <span class="detail-value" id="visibility">10 km</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
